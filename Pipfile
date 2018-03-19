@@ -7,7 +7,11 @@ name = "pypi"
 
 [packages]
 
-fire = "*"
+gitpython = "*"
+ipython = "*"
+crayons = "*"
+click = "*"
+giturlparse = {git = "https://github.com/nephila/giturlparse.git"}
 
 
 [dev-packages]
