@@ -50,4 +50,4 @@ If you know `apt`, you know `dockapt`, mostly.
 
 ![dockapt install](https://i.imgur.com/xlr8ji9.png)
 
-![dockapt install](https://i.imgur.com/Ck4mwqt.png)
+![dockapt install](https://i.imgur.com/flFydBi.png)
