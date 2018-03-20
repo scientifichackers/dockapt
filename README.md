@@ -1,4 +1,4 @@
-# DOCAPT
+# dockapt
 A magical fusion of `docker` and `apt` [for Humans™](https://www.kennethreitz.org/projects)
 
 ## WHY
@@ -7,35 +7,37 @@ A magical fusion of `docker` and `apt` [for Humans™](https://www.kennethreitz.
 3. but, docker is designed for hackers, not end user
 
 ## INSTALL
-`$ docapt install self`
+`$ dockapt install self`
 
 #### what does this do?
 - checks if docker is installed
-- creates the `~/.docapt` directory
+- creates the `~/.dockapt` directory
 - `git clone` [this](https://github.com/jessfraz/dockerfiles) for a (fairly large) collection of `Dockerfiles`  
 - adds an alias file to your your `~/.bashrc` / `~/.zshrc`
 
 
 ## TEACH ME MASTER!
-If you know `apt`, you know `docapt`, mostly.
+If you know `apt`, you know `dockapt`, mostly.
 
-+
-    + `$ docapt search foobar`
-    + `$ docapt install foobar`
+-
+    + `$ dockapt search foobar`
+    + `$ dockapt install foobar`
     + `$ foobar`
-    + `$ docapt remove foobar`
-+
-    + `$ docapt list`
-    + `$ docapt update`
-    + `$ docapt upgrade`
-+ 
-    + `$ docapt-repo add https://github.com/foo/bar.git`
-    + `$ docapt-repo remove https://github.com/foo/bar.git`
-    + `$ docapt-repo list`
+    + `$ dockapt remove foobar`
+
+-
+    + `$ dockapt list`
+    + `$ dockapt update`
+    + `$ dockapt upgrade`
+
+- 
+    + `$ dockapt-repo add https://github.com/foo/bar.git`
+    + `$ dockapt-repo remove https://github.com/foo/bar.git`
+    + `$ dockapt-repo list`
 
 ## HOW
-- recursively searches `~/.docapt/repositories/` for all `Dockerfile`(s) 
-- builds the corresponding `Dockerfile` when you run `docapt install`
+- recursively searches `~/.dockapt/repositories/` for all `Dockerfile`(s) 
+- builds the corresponding `Dockerfile` when you run `dockapt install`
 - adds an alias for the `docker run ...` command (from `Dockerfile` comments)
 - docker does it magic
 
