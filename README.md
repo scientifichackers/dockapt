@@ -1,4 +1,4 @@
-# dockapt
+# DockAPT
 A magical fusion of `docker` and `apt` [for Humans™](https://www.kennethreitz.org/projects)
 
 ## WHY
@@ -17,28 +17,28 @@ A magical fusion of `docker` and `apt` [for Humans™](https://www.kennethreitz.
 - adds an alias file to your your `~/.bashrc` / `~/.zshrc`
 
 
-## TEACH ME MASTER!
+## HOW-TO
 If you know `apt`, you know `dockapt`, mostly.
 
--
-    + `$ dockapt search foobar`
-    + `$ dockapt install foobar`
-    + `$ foobar`
-    + `$ dockapt remove foobar`
 
--
-    + `$ dockapt list`
-    + `$ dockapt update`
-    + `$ dockapt upgrade`
+- `$ dockapt search foobar`
+- `$ dockapt install foobar`
+- `$ foobar`
+- `$ dockapt remove foobar`
 
-- 
-    + `$ dockapt-repo add https://github.com/foo/bar.git`
-    + `$ dockapt-repo remove https://github.com/foo/bar.git`
-    + `$ dockapt-repo list`
+
+- `$ dockapt list`
+- `$ dockapt update`
+- `$ dockapt upgrade`
+
+
+- `$ dockapt-repo add https://github.com/foo/bar.git`
+- `$ dockapt-repo remove https://github.com/foo/bar.git`
+- `$ dockapt-repo list`
 
 ## HOW
 - recursively searches `~/.dockapt/repositories/` for all `Dockerfile`(s) 
 - builds the corresponding `Dockerfile` when you run `dockapt install`
+    - (I am currently looking into integration with docker registry so you can just pull pre-built images)
 - adds an alias for the `docker run ...` command (from `Dockerfile` comments)
-- docker does it magic
 
