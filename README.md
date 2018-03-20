@@ -42,3 +42,12 @@ If you know `apt`, you know `dockapt`, mostly.
     - (I am currently looking into integration with docker registry so you can just pull pre-built images)
 - adds an alias for the `docker run ...` command (from `Dockerfile` comments)
 
+## Screenshots
+#### Its a WIP, but this is what it can do as of now.
+![dockapt-repo add](https://i.imgur.com/LNWtF2A.png)
+
+![dockapt-repo list](https://i.imgur.com/R9mWc1W.png)
+
+![dockapt install](https://i.imgur.com/xlr8ji9.png)
+
+![dockapt install](https://i.imgur.com/Ck4mwqt.png)

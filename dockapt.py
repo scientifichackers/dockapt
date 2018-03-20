@@ -99,7 +99,7 @@ def install(package):
                 tag=image_tag,
                 quiet=False
             )
-            print(image)
+        click.echo(crayons.cyan(f'Successfully built image. Run `dockapt run {required_dir.name}` to use it'))
     else:
         click.echo(
             crayons.magenta(f"I couldn't find ", bold=True) + crayons.green(package, bold=True) + crayons.magenta(
