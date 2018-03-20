@@ -1,4 +1,9 @@
 from pathlib import Path
 
-DOCKER_APT_DIR = Path.home().joinpath('.dockapt')
-REPO_DIR = DOCKER_APT_DIR.joinpath('repositories')
+LOADING = '…'
+DOCKAPT_DIR = Path.home().joinpath('.dockapt')
+REPO_DIR = DOCKAPT_DIR.joinpath('repositories')
+
+DOCKER_IMAGE_NAMESPACE = 'docapt__'
+
+FUZZY_RATIO_CUTOFF = 75

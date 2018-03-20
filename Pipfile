@@ -12,6 +12,12 @@ ipython = "*"
 crayons = "*"
 click = "*"
 giturlparse = {git = "https://github.com/nephila/giturlparse.git"}
+docker = "*"
+numpy = "*"
+halo = "*"
+click-tools = {git = "https://github.com/kennethreitz/click-tools.git"}
+fuzzywuzzy = "*"
+python-levenshtein = "*"
 
 
 [dev-packages]

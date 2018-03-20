@@ -7,6 +7,7 @@ A magical fusion of `docker` and `apt` [for Humans™](https://www.kennethreitz.
 3. but, docker is designed for hackers, not end user
 
 ## INSTALL
+`$ pip3 install dockapt`
 `$ dockapt install self`
 
 #### what does this do?

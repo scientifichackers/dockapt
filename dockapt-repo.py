@@ -1,10 +1,12 @@
-# fire makes making command line tools easier
-import settings
-import subprocess
-from giturlparse import parse
 import shutil
+
 import click
 import crayons
+import git
+from giturlparse import parse
+from halo import Halo
+
+import settings
 
 
 @click.group()
@@ -15,7 +17,7 @@ def cli():
 @click.command()
 def _list():
     """List all the repositories"""
-    for repo in settings.REPO_DIR.glob('*'):
+    for repo in settings.REPO_DIR.iterdir():
         click.echo(repo.name)
 
 
@@ -42,7 +44,8 @@ def remove(query):
             shutil.rmtree(repo)
             click.echo(crayons.blue(f'Successfully deleted repo ({repo.name})'))
         else:
-            click.echo(crayons.green(f'Aborted!'))
+            raise click.Abort
+
 
 @click.command()
 @click.argument('git_remote')
@@ -55,15 +58,21 @@ def add(git_remote):
         destination = settings.REPO_DIR.joinpath(repo_name)
 
         if destination.exists():
-            if click.prompt(crayons.cyan('That repo is already added, do you want me to add it again?')):
-                click.echo(crayons.red('Removing existing repo..'))
+            if click.confirm(crayons.cyan('That repo is already added, do you want me to add it again?')):
+                click.echo(crayons.red('Removing existing repo' + settings.LOADING))
                 shutil.rmtree(destination)
             else:
-                return
+                raise click.Abort
 
-        click.echo(crayons.blue(f'Adding repo ({repo_name})..\n'))
-        subprocess.check_call(['git', 'clone', git_remote.url2git, str(destination)])
-        click.echo(crayons.green(f'\nSuccessfully added repo ({repo_name})'))
+        click.echo(
+            '{0} {1}{2}'.format(crayons.white('Adding repository', bold=True), crayons.green(repo_name),
+                                crayons.white(settings.LOADING, bold=True))
+        )
+        click.echo(f'repo dir - {str(destination)}')
+        with Halo():
+            git.Repo.clone_from(git_remote.url2git, str(destination))
+
+        click.echo(crayons.cyan('Successfully added repository ', bold=True) + crayons.green(repo_name))
     else:
         click.echo(crayons.red("I don't think that's a valid git remote url, sorry."))
 
