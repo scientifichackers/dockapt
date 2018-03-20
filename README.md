@@ -20,21 +20,21 @@ A magical fusion of `docker` and `apt` [for Humans™](https://www.kennethreitz.
 ## HOW-TO
 If you know `apt`, you know `dockapt`, mostly.
 
+- ✨
+    - `$ dockapt search foobar`
+    - `$ dockapt install foobar`
+    - `$ foobar`
+    - `$ dockapt remove foobar`
 
-- `$ dockapt search foobar`
-- `$ dockapt install foobar`
-- `$ foobar`
-- `$ dockapt remove foobar`
+- ✨
+    - `$ dockapt list`
+    - `$ dockapt update`
+    - `$ dockapt upgrade`
 
-
-- `$ dockapt list`
-- `$ dockapt update`
-- `$ dockapt upgrade`
-
-
-- `$ dockapt-repo add https://github.com/foo/bar.git`
-- `$ dockapt-repo remove https://github.com/foo/bar.git`
-- `$ dockapt-repo list`
+- ✨
+    - `$ dockapt-repo add https://github.com/foo/bar.git`
+    - `$ dockapt-repo remove https://github.com/foo/bar.git`
+    - `$ dockapt-repo list`
 
 ## HOW
 - recursively searches `~/.dockapt/repositories/` for all `Dockerfile`(s) 
