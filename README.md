@@ -1,9 +1,9 @@
 # DockAPT
 ### A magical fusion of `docker` and `APT` [for Humans™](https://www.kennethreitz.org/projects)
-*DockAPT* brings together the power of `docker` and `APT` into a single toolchain giving the best of both worlds
+__DockAPT__ brings together the power of `docker` and `APT` into a single toolchain giving the best of both worlds
 
 ## WHY
-0. I was tired of breaking my linux everyday.
+*I was tired of breaking my linux everyday.*
 1. apt is intrinsically designed to break your system
 2. docker solves 1 
 3. but, docker is designed for hackers, not end user
