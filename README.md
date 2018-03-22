@@ -1,6 +1,6 @@
 # DockAPT
-A magical fusion of `docker` and `apt` [for Humans™](https://www.kennethreitz.org/projects)
-
+### A magical fusion of `docker` and `APT` [for Humans™](https://www.kennethreitz.org/projects)
+DockAPT brings together the power of `docker` and `APT` into a single toolchain giving the best of both worlds
 ## WHY
 1. apt is intrinsically designed to break your system
 2. docker solves 1 
