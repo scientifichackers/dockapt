@@ -9,8 +9,8 @@ __DockAPT__ brings together the power of `docker` and `APT` into a single toolch
 3. but, docker is designed for hackers, not end user
 
 ## INSTALL
-`$ pip3 install dockapt`
-`$ dockapt install self`
+- `$ pip3 install dockapt`
+- `$ dockapt install self`
 
 #### what does this do?
 - checks if docker is installed
