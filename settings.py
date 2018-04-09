@@ -1,9 +1,21 @@
 from pathlib import Path
 
-LOADING = '…'
 DOCKAPT_DIR = Path.home().joinpath('.dockapt')
 REPO_DIR = DOCKAPT_DIR.joinpath('repositories')
 
-DOCKER_IMAGE_NAMESPACE = 'docapt__'
+IMAGE_TAG = {
+    'namespace': 'docapt__',
+    'separator': '.',
+    'tag_separator': ':'
+}
 
 FUZZY_RATIO_CUTOFF = 75
+
+LOADING = '…'
+
+LABELS = {
+    'registry': 'registry_image',
+    'run': 'docker_run_flags'
+}
+
+SPINNER = 'moon'
